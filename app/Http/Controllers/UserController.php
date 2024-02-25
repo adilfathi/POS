@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    function user(){
-        return view('user');
+    function user($id,$name){
+        return view('user',['id' => $id, 'name' => $name]);
     }
 }
