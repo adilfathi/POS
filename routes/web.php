@@ -25,3 +25,4 @@ Route::get('category/food',[CategoryController::class,'food']);
 Route::get('category/beauty',[CategoryController::class,'beauty']);
 Route::get('category/homecare',[CategoryController::class,'homecare']);
 Route::get('category/baby',[CategoryController::class,'baby']);
+
