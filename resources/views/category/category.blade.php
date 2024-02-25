@@ -7,7 +7,6 @@
     <title>Category</title>
 </head>
 <body>
-    <a href="/">Kembali ke home</a>
     <h1 id="category">Category</h1>
     <p>Ini Merupakan Kategori Aplikasi POS</p>
     <ul>
