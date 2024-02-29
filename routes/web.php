@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',[HomeController::class,'Home']);
 Route::get('/user/{id}/name/{name}',[UserController::class,'user']);
-Route::get('/sales',[SalesController::class,'sales']);
+Route::get('/sales',[SalesController::class,'sales1']);
 Route::get('/category',[CategoryController::class,'category']);
 Route::get('category/food',[CategoryController::class,'food']);
 Route::get('category/beauty',[CategoryController::class,'beauty']);

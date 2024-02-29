@@ -11,7 +11,7 @@
     <p>POS Merupakan Aplikasi Point Of Sales</p>
     <ul>
         <li><a href="/category">Kategori</a></li>
-        <li><a href="/user">User</a></li>
+        <li><a href="/user/{id}/name/{name}">User</a></li>
         <li><a href="/sales">History Transaksi</a></li>
     </ul>
 </body>

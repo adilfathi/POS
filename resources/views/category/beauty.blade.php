@@ -11,3 +11,4 @@
     <p>Ini Merupakah Halaman Beauty Aplikasi POS</p>
 </body>
 </html>
+
