@@ -17,27 +17,27 @@ class KategoriSeeder extends Seeder
         $data = [
             [
                 'kategori_id' => 1,
-                'kategori_kode' => 1,
+                'kategori_kode' => 'MKN',
                 'kategori_nama' => 'Makanan',
             ],
             [
                 'kategori_id' => 2,
-                'kategori_kode' => 2,
+                'kategori_kode' => 'MNM',
                 'kategori_nama' => 'Minuman',
             ],
             [
                 'kategori_id' => 3,
-                'kategori_kode' => 3,
+                'kategori_kode' => 'DPR',
                 'kategori_nama' => 'Perlengkapan Dapur',
             ],
             [
                 'kategori_id' => 4,
-                'kategori_kode' => 4,
+                'kategori_kode' => 'OBT',
                 'kategori_nama' => 'Obat',
             ],
             [
                 'kategori_id' => 5,
-                'kategori_kode' => 5,
+                'kategori_kode' => 'PMBR',
                 'kategori_nama' => 'Pembersih',
             ]
 
