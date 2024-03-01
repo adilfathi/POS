@@ -22,6 +22,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',[HomeController::class,'Home']);
 Route::get('/level',[LevelController::class,'index']);
 Route::get('/kategori',[KategoriController::class,'index']);
+Route::get('/user',[UserController::class,'index']);
+
+
 Route::get('/user/{id}/name/{name}',[UserController::class,'user']);
 Route::get('/sales',[SalesController::class,'sales1']);
 Route::get('/category',[CategoryController::class,'category']);
