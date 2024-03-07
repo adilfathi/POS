@@ -25,7 +25,7 @@ Route::get('/kategori',[KategoriController::class,'index']);
 Route::get('/user',[UserController::class,'index']);
 
 
-Route::get('/user/{id}/name/{name}',[UserController::class,'user']);
+// Route::get('/user/{id}/name/{name}',[UserController::class,'user']);
 Route::get('/sales',[SalesController::class,'sales1']);
 Route::get('/category',[CategoryController::class,'category']);
 Route::get('category/food',[CategoryController::class,'food']);

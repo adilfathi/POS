@@ -11,5 +11,5 @@ class UserModel extends Model
     use HasFactory;
 
     protected $table ='m_user';
-    protected $primary_key ='user_id';
+    protected $primaryKey ='user_id';
 }
