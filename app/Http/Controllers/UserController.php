@@ -34,10 +34,18 @@ class UserController extends Controller
         // return view('users', ['data' => $user]);
 
         //Retriving Aggregates
-        $user = UserModel::count();
-        return view('users', ['data' => $user]);
+        // $user = UserModel::count();
+        // return view('users', ['data' => $user]);
         
-
+        $user = UserModel::firstOrCreate(
+            [
+                'username' => 'manager22',
+                'nama' => 'Manager Dua Dua',
+                'password' => Hash::make('12345'),
+                'level_id' => 2
+            ]
+        );
+        return view('users', ['data' => $user]);
     }
 }
 
