@@ -21,7 +21,7 @@ class UserController extends Controller
             'password' => Hash::make('1234'),
             'level_id' => 5
         ];
-        UserModel::insert($data);
+        UserModel::where('username','customer-1')-> update($data);
 
         $user = UserModel::all();
         return view('users', ['data' => $user]);
