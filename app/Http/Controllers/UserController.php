@@ -32,6 +32,12 @@ class UserController extends Controller
         //No Found Exception
         // $user= UserModel::where('username','manager')->firstOrFail();
         // return view('users', ['data' => $user]);
+
+        //Retriving Aggregates
+        $user = UserModel::count();
+        return view('users', ['data' => $user]);
+        
+
     }
 }
 
