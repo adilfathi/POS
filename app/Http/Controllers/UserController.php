@@ -23,10 +23,15 @@ class UserController extends Controller
         // ];
         // UserModel::where('username','customer-1')-> update($data);
 
-        $user = UserModel::findOr(2,['username','nama'],function(){
-            abort(404);
-        });
-        return view('users', ['data' => $user]);
+        // Retriving Single Model
+        // $user = UserModel::findOr(2,['username','nama'],function(){
+        //     abort(404);
+        // });
+        // return view('users', ['data' => $user]);
+
+        //No Found Exception
+        // $user= UserModel::where('username','manager')->firstOrFail();
+        // return view('users', ['data' => $user]);
     }
 }
 
