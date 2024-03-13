@@ -1,19 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>POS</title>
-</head>
-<body>
-    <h1>Home</h1>
-    <p>POS Merupakan Aplikasi Point Of Sales</p>
-    <ul>
-        <li><a href="/category">Kategori</a></li>
-        <li><a href="/user/{id}/name/{name}">User</a></li>
-        <li><a href="/sales">History Transaksi</a></li>
-    </ul>
-</body>
-</html>
+@extends('layouts.app')
 
+{{-- Customize layout sections --}}
+
+@section('subtitle', 'Welcome')
+@section('content_header_title', 'Home')
+@section('content_header_subtitle', 'Welcome')
+
+{{-- Content body: main page content --}}
+
+@section('content_body')
+    <p>Welcome to this beautiful admin panel.</p>
+@stop
+
+{{-- Push extra CSS --}}
+
+@push('css')
+    {{-- Add here extra stylesheets --}}
+    {{-- <link rel="stylesheet" href="/css/admin_custom.css"> --}}
+@endpush
+
+{{-- Push extra scripts --}}
+
+@push('js')
+    <script> console.log("Hi, I'm using the Laravel-AdminLTE package!"); </script>
+@endpush
