@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\KategoriController;
@@ -21,7 +22,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',[HomeController::class,'Home']);
 Route::get('/level',[LevelController::class,'index']);
+
+Route::post('/kategori',[KategoriController::class,'store']);
+Route::get('/kategori/create',[KategoriController::class,'create']);
 Route::get('/kategori',[KategoriController::class,'index']);
+
 Route::get('/user',[UserController::class,'index']);
 Route::get('/user/tambah',[UserController::class,'tambah']);
 Route::post('/user/tambah_simpan',[UserController::class,'tambah_simpan']);

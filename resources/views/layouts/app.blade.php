@@ -37,16 +37,13 @@
 @stop
 {{-- Add common Javascript/Jquery code --}}
 @push('js')
-<script>
-    $(document).ready(function() {
-        // Add your common script logic here...
-});
-</script>
+<script src="https://cdn.datatables.net/2.0.2/js/dataTables.js"></script>
 @endpush
 {{-- Add common CSS customizations --}}
 @push('css')
+<link rel="stylesheet" href="https://cdn.datatables.net/2.0.2/css/dataTables.dataTables.css" />
 <style type="text/css">
-    {{-- You can add AdminLTE customizations here --}}
+    {{--You can add AdminLTE customizations here --}}
     /*
     .card-header {
         border-bottom: none;

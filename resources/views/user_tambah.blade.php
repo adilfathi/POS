@@ -20,7 +20,7 @@
         <input type="password" name="password" placeholder="Masukan Password">
         <br>
         <label>Level ID</label>
-        <input type="number" name="level_id" placeholder="Masukan ID Levek">
+        <input type="number" name="level_id" placeholder="Masukan ID Level">
         <br>
         <input type="submit" value="Simpan" class="btn btn-success">
     </form>
