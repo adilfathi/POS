@@ -39,4 +39,28 @@ class KategoriController extends Controller
     function create(){
         return view('kategori.create');
     }
+    public function edit($id)
+    {
+        $data = KategoriModel::find($id);
+        return view('kategori.edit', ['data' => $data]);
+    }
+
+    public function update($id, Request $request)
+    {
+        $kategori= KategoriModel::find($id);
+
+        $kategori->kategori_kode = $request->kategori_kode;
+        $kategori->kategori_nama = $request->kategori_nama;
+
+        $kategori->save();
+        return redirect('/kategori');
+    }
+
+    public function delete($id)
+    {
+        $data = KategoriModel::find($id);
+        $data->delete();
+        return redirect('/kategori');
+    }
+
 }
