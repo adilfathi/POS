@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Models\UserModel;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
@@ -15,6 +16,12 @@ class UserController extends Controller
     function tambah()
     {
         return view('user_tambah');
+    }
+    function store(Request $request): RedirectResponse{
+        $validated = $request-> validated();
+        $validated= $request->safe()->only('user_id','level_id','username','nama','password') ;
+        $validated= $request->safe()->only('user_id','level_id','username','nama','password') ;
+        return redirect('/user');
     }
     function ubah($id){
         $user = UserModel::find($id);
@@ -46,12 +53,19 @@ class UserController extends Controller
 
         return redirect('/user');
     }
+    function create() {
+        return view('/m_user/create');
+    }
 
     function index()
     {
-
         $user = UserModel::with('level')->get();
         return view('users', ['data' => $user]);
+        // $user = UserModel::findOrFail(1);
+        
+
+        // $user = UserModel::with('level')->get();
+        // return view('users', ['data' => $user]);
 
 
         // $data =[
@@ -60,16 +74,21 @@ class UserController extends Controller
         //     'password' => Hash::make('1234'),
         //     'level_id' => 5
         // ];
+        // UserModel::create($data);
+        // $user = UserModel::all();
+        // return view('users', ['data' => $user]);
+
+        // // UserModel::insert($data)
         // UserModel::where('username','customer-1')-> update($data);
 
         // Retriving Single Model
-        // $user = UserModel::findOr(2,['username','nama'],function(){
+        // $user = UserModel::findOr(1,['username','nama'],function(){
         //     abort(404);
         // });
         // return view('users', ['data' => $user]);
 
         //No Found Exception
-        // $user= UserModel::where('username','manager')->firstOrFail();
+        // $user= UserModel::where('username','manager7')->firstOrFail();
         // return view('users', ['data' => $user]);
 
         //Retriving Aggregates
@@ -78,29 +97,13 @@ class UserController extends Controller
 
         // $user = UserModel::create(
         //     [
-        //         'username' => 'manager11',
-        //         'nama' => 'Manager11',
+        //         'username' => 'manager55',
+        //         'nama' => 'Manager Lima Lima',
         //         'password' => Hash::make('12345'),
         //         'level_id' => 2
         //     ]
         // );
-        // $user -> username = 'manager12';
-
-        // $user -> isDirty();
-        // $user -> isDirty('username');
-        // $user-> isDirty('nama');
-        // $user->isDirty(['nama','username']);
-
-        // $user -> isClean();
-        // $user -> isClean('username');
-        // $user-> isClean('nama');
-        // $user->isClean(['nama','username']);
-
-        // $user -> save();
-
-        // $user->isDirty();
-        // $user -> isClean();
-        // dd($user->isDirty());
+        // $user->username = 'manager12';
 
         // $user->wasChanged();
         // $user->wasChanged('username');

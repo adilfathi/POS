@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -20,5 +21,14 @@ class LevelController extends Controller
         $data = DB::select('select * from m_level');
         return view('level', ['data' => $data]);
 
+    }
+    function tambah(){
+        return view('level/create');
+    }
+    function store(Request $request): RedirectResponse{
+        $validated = $request-> validated();
+        $validated= $request->safe()->only('level_id','level_kode','level_nama') ;
+        $validated= $request->safe()->except('level_id','level_kode','level_nama') ;
+        return redirect('/level');
     }
 }
