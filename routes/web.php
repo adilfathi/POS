@@ -6,6 +6,8 @@ use App\Http\Controllers\BarangController;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\FileUploadController;
+use App\Http\Controllers\FormImgController;
+use App\Http\Controllers\FormUploadController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\LevelController;
@@ -152,3 +154,9 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/file-upload', [FileUploadController::class,'fileUpload']);
 Route::post('/file-upload', [FileUploadController::class,'prosesFileUpload']);
+
+Route::get('/form', [FormUploadController::class, 'formUpload']);
+Route::post('/formUpload', [FormUploadController::class, 'uploadFile']);
+
+Route::get('/upload', [FormImgController::class, 'imgUpload']);
+Route::post('/upload', [FormImgController::class, 'prosesImgUpload']);
